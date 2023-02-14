@@ -1,0 +1,14 @@
+.cards-grid__button-like {
+  min-width: 22px;
+  min-height: 19px;
+  background-image: url(../../../images/cards-grid__button-like.svg);
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  border: none;
+  margin-right: 20px;
+}
+
+.cards-grid__button-like:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

@@ -3,15 +3,20 @@
   font-size: 42px;
   line-height: 48px;
   color: #FFFFFF;
-  margin: 0 0 9px;
+  align-self: end;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 294px;
+  margin: 0 0 9px 0;
   grid-area: profile__name;
 }
 
-@media screen and (min-width: 320px) and (max-width: 465px) {
+@media screen and (max-width: 465px) {
   .profile__name {
     font-size: 27px;
     line-height: 33px;
     margin: 0 0 7px 0px;
-    text-align: center;
-  } 
+    justify-self: end;
+  }
 }

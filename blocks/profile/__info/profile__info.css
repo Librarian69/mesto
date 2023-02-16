@@ -1,12 +1,29 @@
 .profile__info {
+  display: grid;
   align-self: center;
-  margin-right: 24px;
   grid-area: profile__info;
+  grid-template-columns: 150px 300px 36px;
+  grid-template-areas:
+  "profile__avatar profile__name profile__button-edit"
+  "profile__avatar profile__description .";
 }
 
-@media screen and (min-width: 320px) and (max-width: 896px) {
+
+@media screen and (max-width: 896px) {
   .profile__info {
-    margin: 0 10px 33px 27px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 225px 42px;
+    grid-template-areas:
+    "profile__avatar profile__avatar"
+    "profile__name profile__button-edit"
+    "profile__description profile__description";
+    margin-bottom: 33px;
   }
 }
 
+@media screen  and (min-width: 466px) and (max-width: 896px) {
+  .profile__info {
+    grid-template-columns: 294px 42px;
+  }
+}

@@ -5,88 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./page/index.css">
-    <title>Document</title>
+    <title>Место</title>
 </head>
 <body class="page">
    <header class="header">
     <img class="logo header__logo" src="./images/logo.svg" alt="Лого">
-    <div class="header__line"></div>
   </header>
    <main class="content">
     <section class="profile">
-      <div class="profile__card">
-        <img class="profile__avatar" src="./images/profile__avatar.png" alt="Фото профиля">
         <div class="profile__info">
+          <img class="profile__avatar" src="./images/profile__avatar.png" alt="Фото профиля">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <p class="profile__description">Исследователь океана</p>
+          <button class="profile__button-edit"  type="button"></button>
         </div>
-        <button class="profile__button-edit"></button>
-        <button class="profile__button-add"></button>
-      </div>
+        <button class="profile__button-add" type="button"></button>
     </section>
     <section class="cards-grid">
       <ul class="cards-grid__list">
-        <li>
-          <img class="cards-grid__photo" src="./images/card-grid-karachaevsk.png" alt="Старая церковь на фоне лесистой горы">
-          <div class="cards-grid__container">
-            <h2 class="cards-grid__title">Карачаевск</h2>
-            <button class="cards-grid__button-like"></button>
-          </div>          
+        <li class="card">
+          <img class="card__photo" src="./images/card-grid-karachaevsk.png" alt="Старая церковь на фоне лесистой горы">
+          <div class="card__container">
+            <h2 class="card__title">Карачаевск</h2>
+            <button class="card__button-like" type="button"></button>
+          </div>
         </li>
-        <li>
-          <img class="cards-grid__photo" src="./images/card-grid-mountain-elbrus.png" alt="Небольшой холм за которым гора">
-          <div class="cards-grid__container">
-            <h2 class="cards-grid__title">Гора Эльбрус</h2>
-            <button class="cards-grid__button-like"></button>
-          </div> 
+        <li class="card">
+          <img class="card__photo" src="./images/card-grid-mountain-elbrus.png" alt="Небольшой холм за которым гора">
+          <div class="card__container">
+            <h2 class="card__title">Гора Эльбрус</h2>
+            <button class="card__button-like" type="button"></button>
+          </div>
         </li>
-        <li>
-          <img class="cards-grid__photo" src="./images/card-grid-dombai.png" alt="Лесистая гора рядом со скалистой горой">
-          <div class="cards-grid__container">
-            <h2 class="cards-grid__title">Домбай</h2>
-            <button class="cards-grid__button-like"></button>
-          </div> 
+        <li class="card">
+          <img class="card__photo" src="./images/card-grid-dombai.png" alt="Лесистая гора рядом со скалистой горой">
+          <div class="card__container">
+            <h2 class="card__title">Домбай</h2>
+            <button class="card__button-like" type="button"></button>
+          </div>
         </li>
-        <li>
-          <img class="cards-grid__photo" src="./images/card-grid-mountain-elbrus.png" alt="Небольшой холм за которым гора">
-          <div class="cards-grid__container">
-            <h2 class="cards-grid__title">Гора Эльбрус</h2>
-            <button class="cards-grid__button-like"></button>
-          </div> 
+        <li class="card">
+          <img class="card__photo" src="./images/card-grid-mountain-elbrus.png" alt="Небольшой холм за которым гора">
+          <div class="card__container">
+            <h2 class="card__title">Гора Эльбрус</h2>
+            <button class="card__button-like" type="button"></button>
+          </div>
         </li>
-        <li>
-          <img class="cards-grid__photo" src="./images/card-grid-dombai.png" alt="Лесистая гора рядом со скалистой горой">
-          <div class="cards-grid__container">
-            <h2 class="cards-grid__title">Домбай</h2>
-            <button class="cards-grid__button-like"></button>
-          </div> 
+        <li class="card">
+          <img class="card__photo" src="./images/card-grid-dombai.png" alt="Лесистая гора рядом со скалистой горой">
+          <div class="card__container">
+            <h2 class="card__title">Домбай</h2>
+            <button class="card__button-like" type="button"></button>
+          </div>
         </li>
-        <li>
-          <img class="cards-grid__photo" src="./images/card-grid-karachaevsk.png" alt="Старая церковь на фоне лесистой горы">
-          <div class="cards-grid__container">
-            <h2 class="cards-grid__title">Карачаево-черкесская республика</h2>
-            <button class="cards-grid__button-like"></button>
-          </div>          
+        <li class="card">
+          <img class="card__photo" src="./images/card-grid-karachaevsk.png" alt="Старая церковь на фоне лесистой горы">
+          <div class="card__container">
+            <h2 class="card__title">Карачаево-черкесская республика</h2>
+            <button class="card__button-like" type="button"></button>
+          </div>
         </li>
       </ul>
     </section>
   </main>
-  <div class="popup popup_disabled">
-    <form class="popup__container">
+  <div class="popup">
+    <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
-      <ul class="popup__list">
-        <li><input class="popup__input popup__input_type_name" type="text"></li>
-        <li><input class="popup__input popup__input_type_info" type="text"></li>
-      </ul>
-      <button class="popup__button-save">Сохронить</button>
-      <button class="popup__button-close"></button>
-    </form>
+      <button class="popup__button-close" type="button"></button>
+      <form class="popup__form">
+        <input class="popup__input popup__input_type_name" type="text" name="name">
+        <input class="popup__input popup__input_type_info" type="text" name="info">
+        <button class="popup__button-save" type="submit">Сохранить</button>
+      </form>
+    </div>
   </div>
   <footer class="footer">
     <p class="footer__copyright">
       &copy; 2020 Mesto Russia
     </p>
   </footer>
-  <script src="./scripts/script.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
 </html>

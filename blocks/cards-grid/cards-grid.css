@@ -9,7 +9,7 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 597px) {
+@media screen and (max-width: 597px) {
   .cards-grid {
     max-width: 564px;
     margin: 0 auto 50px;

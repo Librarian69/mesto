@@ -1,0 +1,11 @@
+.card__photo {
+  display: block;
+  max-width: 282px;
+  border-radius: 5% 5% 0% 0%;
+}
+
+@media screen and (max-width: 597px) {
+  .card__photo {
+    min-width: 100%;
+  }
+}

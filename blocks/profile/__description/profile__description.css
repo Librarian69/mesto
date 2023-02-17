@@ -12,16 +12,9 @@
   grid-area: profile__description;
 }
 
-@media screen and (min-width: 466px) and (max-width: 896px) {
-  .profile__description {
-    text-align: center;
-  }
-}
-
 @media screen and (max-width: 465px) {
   .profile__description {
     font-size: 14px;
     line-height: 17px;
-    text-align: center;
   }
 }

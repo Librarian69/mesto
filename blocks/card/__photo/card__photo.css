@@ -2,6 +2,11 @@
   display: block;
   max-width: 282px;
   border-radius: 5% 5% 0% 0%;
+  aspect-ratio: 1;
+}
+
+.card__photo:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 597px) {

@@ -23,52 +23,11 @@
     </section>
     <section class="cards-grid">
       <ul class="cards-grid__list">
-        <li class="card">
-          <img class="card__photo" src="./images/card-grid-karachaevsk.png" alt="Старая церковь на фоне лесистой горы">
-          <div class="card__container">
-            <h2 class="card__title">Карачаевск</h2>
-            <button class="card__button-like" type="button"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__photo" src="./images/card-grid-mountain-elbrus.png" alt="Небольшой холм за которым гора">
-          <div class="card__container">
-            <h2 class="card__title">Гора Эльбрус</h2>
-            <button class="card__button-like" type="button"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__photo" src="./images/card-grid-dombai.png" alt="Лесистая гора рядом со скалистой горой">
-          <div class="card__container">
-            <h2 class="card__title">Домбай</h2>
-            <button class="card__button-like" type="button"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__photo" src="./images/card-grid-mountain-elbrus.png" alt="Небольшой холм за которым гора">
-          <div class="card__container">
-            <h2 class="card__title">Гора Эльбрус</h2>
-            <button class="card__button-like" type="button"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__photo" src="./images/card-grid-dombai.png" alt="Лесистая гора рядом со скалистой горой">
-          <div class="card__container">
-            <h2 class="card__title">Домбай</h2>
-            <button class="card__button-like" type="button"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__photo" src="./images/card-grid-karachaevsk.png" alt="Старая церковь на фоне лесистой горы">
-          <div class="card__container">
-            <h2 class="card__title">Карачаево-Черкесия</h2>
-            <button class="card__button-like" type="button"></button>
-          </div>
-        </li>
+
       </ul>
     </section>
   </main>
-  <div class="popup">
+  <div class="popup popup_edit">
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
       <button class="popup__button-close" type="button"></button>
@@ -79,6 +38,38 @@
       </form>
     </div>
   </div>
+  <div class="popup popup_add-photo">
+    <div class="popup__container">
+      <h2 class="popup__title">Новое место</h2>
+      <button class="popup__button-close popup__button-close_add-photo" type="button"></button>
+      <form class="popup__form popup__form_add-photo" name="addPhotoForm">
+        <input class="popup__input popup__input_type_appellation" type="text" name="appellation" placeholder="Название">
+        <input class="popup__input popup__input_type_link" type="text" name="link" placeholder="Ссылка на картинку">
+        <button class="popup__button-save" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <div class="popup popup_card-photo">
+    <div class="popup__container popup__container_photo">
+      <img class="popup__photo" src="#" alt="">
+      <h2 class="popup__photo-title">
+
+      </h2>
+      <button class="popup__button-close popup__button-close_photo" type="button"></button>
+    </div>
+  </div>
+  <template class="template-photo-card">
+    <li class="card">
+      <img class="card__photo" src="#" alt="">
+      <div class="card__container">
+        <h2 class="card__title">
+
+        </h2>
+        <button class="card__button-like" type="button"></button>
+      </div>
+      <button class="card__button-delete" type="button"></button>
+    </li>
+  </template>
   <footer class="footer">
     <p class="footer__copyright">
       &copy; 2020 Mesto Russia

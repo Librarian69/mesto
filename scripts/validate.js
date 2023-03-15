@@ -61,9 +61,9 @@ const setEventListeners = (form, inputList, { errorClassInput, activeErrorsClass
 };
 
 function enableValidation({ formSelector, inputSelector, submitButtonSelector, ...config }) {
-  const form = document.querySelectorAll(formSelector);
+  const forms = document.querySelectorAll(formSelector);
 
-  form.forEach((form) => {
+  forms.forEach((form) => {
     const inputList = form.querySelectorAll(inputSelector);
     const submitButton = form.querySelector(submitButtonSelector);
 
@@ -85,8 +85,14 @@ const validationConfig = {
 
 function resetValidation(form,  validationConfig) {
   const inputList = form.querySelectorAll( validationConfig.inputSelector);
+  const submitButton = form.querySelector( validationConfig.submitButtonSelector);
+
   inputList.forEach((input) => {
     hideInputError(input,  validationConfig.errorClassInput,  validationConfig.activeErrorsClass);
     hideColorBorder(input,  validationConfig.colorInputBorderError);
   });
+  
+  checkFormValidity(form, submitButton, validationConfig.inactiveButtonClass);
 }
+
+enableValidation(validationConfig);

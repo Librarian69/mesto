@@ -1,5 +1,6 @@
-import {validationConfig, enableValidation, resetValidation} from './FormValidator.js';
-import {addNewCard} from '../scripts/Card.js';
+import {validationConfig, formValidators, FormValidator} from './FormValidator.js';
+import {initialCards} from '../scripts/constants.js';
+import {Card} from '../scripts/Card.js';
 
 const page = document.querySelector('.page');
 const buttonEdit = document.querySelector('.profile__button-edit');
@@ -77,7 +78,7 @@ buttonEdit.addEventListener('click', function() {
   openPopup(popupProfile);
   nameInput.value = profileName.textContent;
   popupInfo.value = profileDescription.textContent;
-  resetValidation(formProfileEdit, validationConfig);
+  resetFormValidation('editProfileForm');
 });
 
 buttonCloseEditProfile.addEventListener('click', function() {
@@ -103,7 +104,7 @@ formProfileEdit.addEventListener('submit', submitProfileForm);
 profileButtonAdd.addEventListener('click', function () {
   openPopup(popupAddPhoto);
   popupFormAddPhoto.reset();
-  resetValidation(popupFormAddPhoto, validationConfig);
+  resetFormValidation('addPhotoForm');
 }); 
 
 popupButtonCloseAddPhoto.addEventListener('click', function () {
@@ -123,6 +124,43 @@ function submitPhotoForm (evt) {
 
 popupFormAddPhoto.addEventListener('submit', submitPhotoForm);
 
-enableValidation(validationConfig);
+function handleCardClick(name, link) {
+  popupImageTitle.textContent = name;
+  popupImage.src = link;
+  popupImage.alt = name;
+  openPopup(popupCardPhoto);
+}
 
-export {popupImageTitle, popupImage, popupCardPhoto, openPopup, cardsGridList};
+function createCard(item) {
+  const card = new Card(item, '.template-photo-card', handleCardClick);
+  const cardElement = card.generateCard();
+  return cardElement;
+}
+
+initialCards.forEach(function(item) { 
+  const cardElement = createCard(item);
+  cardsGridList.append(cardElement);
+});
+
+
+function addNewCard(name, link) {
+  const cardElement = createCard({name, link});
+  cardsGridList.prepend(cardElement);
+}
+
+const enableValidation = (config) => {
+  const formList = Array.from(document.querySelectorAll(config.formSelector));
+  formList.forEach((formElement) => {
+    const validator = new FormValidator(formElement, config);
+    const formName = formElement.getAttribute('name');
+    formValidators[formName] = validator;
+    validator.setEventListeners();
+  });
+};
+
+function resetFormValidation(formName) {
+  const formValidator = formValidators[formName];
+    formValidator.resetValidation();
+}
+
+enableValidation(validationConfig);

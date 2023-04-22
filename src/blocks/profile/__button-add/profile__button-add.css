@@ -1,7 +1,7 @@
 .profile__button-add {
   min-width: 150px;
   max-height: 50px;
-  background-image: url(../../../images/Add\ Button.svg);
+  background-image: url(../../../images/Add__Button.svg);
   background-size: contain;
   background-color: #000000;
   background-repeat: no-repeat;
@@ -25,7 +25,7 @@
   .profile__button-add {
     min-width: 394px;
     min-height: 71px;
-    background-image: url(../../../images/Add\ Button\ Large.svg);
+    background-image: url(../../../images/Add__Button-Large.svg);
   } 
 }
 
@@ -33,6 +33,6 @@
   .profile__button-add {
     min-width: 282px;
     min-height: 50px;
-    background-image: url(../../../images/Add\ Button\ Large.svg);
+    background-image: url(../../../images/Add__Button-Large.svg);
   } 
 }

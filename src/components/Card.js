@@ -39,7 +39,7 @@ class Card {
     });
 
     this._deleteButton.addEventListener('click', () => {
-      this._deletCard();
+      this._deleteCard();
     });
 
     this._cardImage.addEventListener('click', () => {
@@ -51,7 +51,7 @@ class Card {
     this._likeButton.classList.toggle('card__button-like_active');
   }
 
-  _deletCard() {
+  _deleteCard() {
     this._element.remove();
   }
 }

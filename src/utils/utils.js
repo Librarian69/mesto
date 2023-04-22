@@ -1,14 +1,7 @@
-import Popup from '../components/Popup.js';
-import PopupWithImage from '../components/PopupWithImage.js';
-import {validationConfig, formValidators, FormValidator} from '../components/FormValidator.js';
+import FormValidator from '../components/FormValidator.js';
+import {formValidators} from '../utils/constants.js';
 import {Card} from '../components/Card';
-import {cardsSection} from '../pages/index.js'
-
-function openPopup(popupSelector) {
-  const popup = new Popup(popupSelector);
-  popup.open();
-  popup.setEventListeners();
-}
+import {cardsSection, popupClickImage} from '../pages/index.js';
 
 const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
@@ -26,14 +19,18 @@ function resetFormValidation(formName) {
 }
 
 function addNewCard(name, link) {
-  const card = new Card({ name, link }, '.template-photo-card', handleCardClick);
-  const cardElement = card.generateCard();
+  const cardElement = createCard({ name, link });
   cardsSection.addItem(cardElement);
 }
 
 function handleCardClick(name, link) {
-  const popup = new PopupWithImage('.popup_card-photo');
-  popup.open({ src: link, alt: name });
+  popupClickImage.open({ src: link, alt: name });
 }
 
-export {openPopup, enableValidation, resetFormValidation, addNewCard, handleCardClick};
+function createCard(item) {
+  const card = new Card(item, '.template-photo-card', handleCardClick);
+  const cardElement = card.generateCard();
+  return cardElement
+}
+
+export {enableValidation, resetFormValidation, addNewCard, handleCardClick, createCard};

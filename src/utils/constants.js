@@ -26,6 +26,16 @@ export const initialCards = [
 ]; 
 
 export const buttonEdit = document.querySelector('.profile__button-edit');
-export const nameInput = document.querySelector('.popup__input_type_name');
-export const popupInfo = document.querySelector('.popup__input_type_info');
 export const profileButtonAdd = document.querySelector('.profile__button-add');
+
+export const formValidators = {}
+
+export const validationConfig = {
+  formSelector: '.popup__form',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__button-save',
+  inactiveButtonClass: 'popup__button-save_inactive',
+  errorClassInput: 'popup__input-error_type_',
+  activeErrorsClass: 'popup__input-error_active',
+  colorInputBorderError: 'popup__input_border-color'
+};

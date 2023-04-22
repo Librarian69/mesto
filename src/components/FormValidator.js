@@ -1,5 +1,7 @@
-class FormValidator {
-  constructor(form, validationConfig) {
+import {validationConfig} from '../utils/constants.js';
+
+export default class FormValidator {
+  constructor(form) {
     this.form = form;
     this.validationConfig = validationConfig;
     this._inputList = Array.from(this.form.querySelectorAll(this.validationConfig.inputSelector));
@@ -56,17 +58,3 @@ class FormValidator {
     });
   }
 }
-
-const formValidators = {}
-
-const validationConfig = {
-  formSelector: '.popup__form',
-  inputSelector: '.popup__input',
-  submitButtonSelector: '.popup__button-save',
-  inactiveButtonClass: 'popup__button-save_inactive',
-  errorClassInput: 'popup__input-error_type_',
-  activeErrorsClass: 'popup__input-error_active',
-  colorInputBorderError: 'popup__input_border-color'
-};
-
-export {validationConfig, formValidators, FormValidator};

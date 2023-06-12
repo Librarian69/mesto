@@ -1,41 +1,22 @@
-export const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-]; 
+export const popupProfileOpenButton = document.querySelector(".profile__button-edit");
+export const popupProfileForm = document.querySelector(".popup__form_edit-profile");
+export const popupAddOpenButton = document.querySelector(".profile__button-add");
+export const popupAddForm = document.querySelector(".popup__form_add-photo");
+export const btnAvatar = document.querySelector(".profile__button-edit-avatar");
+export const updateAvatarForm = document.querySelector(".popup__form_avatar");
 
-export const buttonEdit = document.querySelector('.profile__button-edit');
-export const profileButtonAdd = document.querySelector('.profile__button-add');
+export const cardConfig = {
+  titleSelector: ".card__title",
+  imgSelector: ".card__photo",
+  btnLikeSelector: ".card__button-like",
+  btnActiveSelector: ".card__button-like_active",
+  btnDeleteSelector: ".card__button-delete",
+};
 
-export const formValidators = {}
-
-export const validationConfig = {
-  formSelector: '.popup__form',
-  inputSelector: '.popup__input',
-  submitButtonSelector: '.popup__button-save',
-  inactiveButtonClass: 'popup__button-save_inactive',
-  errorClassInput: 'popup__input-error_type_',
-  activeErrorsClass: 'popup__input-error_active',
-  colorInputBorderError: 'popup__input_border-color'
+export const config = {
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button-save",
+  submitButtonSelectorDisable: "popup__button-save_inactive",
+  inputErrorClass: "popup__input-error_type_",
+  errorClass: "popup__input-error_active",
 };

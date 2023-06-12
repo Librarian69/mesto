@@ -1,10 +1,4 @@
 .profile__info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile__info {
   display: grid;
   align-self: center;
   grid-area: profile__info;
